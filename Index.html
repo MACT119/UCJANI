@@ -1,17 +1,204 @@
 <html>
+<script src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery.mlens-1.2.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+    $("#botella").mlens(
+    {
+        imgSrc: $("#botella").attr("data-big"),   // path of the hi-res version of the image
+        lensShape: "circle",                // shape of the lens (circle/square)
+        lensSize: 180,                  // size of the lens (in px)
+        borderSize: 4,                  // size of the lens border (in px)
+        borderColor: "#fff",                // color of the lens border (#hex)
+        borderRadius: 0,                // border radius (optional, only if the shape is square)
+        imgOverlay: $("#botella").attr("data-overlay"), // path of the overlay image (optional)
+        overlayAdapt: true // true if the overlay image has to adapt to the lens size (true/false)
+    });
+});
+</script>
 <style>
 body {
-		background-color:#FFAAAA;
+		background-color:#FFEEEE;
 		background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
-                   url("./Diseño e Imagen/Ugjaní Belleza.png");
+                   //url("../Diseño e Imagen/Ugjaní Belleza.png");
+}
+.pendon{
+	width: 500px;
+	height: 250px;
+	margin: 100px;
+	background-color: white;
+	outline: solid 1px black;
+	border-radius: 12px;
+	
+}
+.center
+{
+  //position: absolute;
+  margin: auto;
+  top: 5%;
+  right: 10;
+  bottom: 10;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #eee;
+  border-radius: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align:center;
+}
+.imagecenter{
+  justify-content: center;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 30%;
+  border-radius: 10%;
+  padding-left: 30%;
+
+}
+.imagecatalog
+{
+	width:300px;
+	height: 350px;
+	position: relative;
+    margin: 20px auto;
+    border: 12px solid #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(50,50,50 0.5);
+}
+
+.efectolupa { cursor: pointer; }
+.efectolupa img:hover {
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+}
+.efectolupa:after {
+   content: '\f002';
+    position: relative;
+    color: #ccc;
+    width: 30px;
+    height: 30px;
+    bottom: 59px;
+    left: 458px; 
+    font-family: FontAwesome;
+    font-style: normal;
+    opacity: 0.8;
+    font-size: 18px;
+}
+#contenido {
+    position: relative;
+    width: 640px;
+    height: auto;
+    margin: 20px auto;
+    border: 12px solid #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(50,50,50 0.5);
 }
 </style>
 <BODY>
 <B>
-<P style="font-size:80">UCJANÍ</P>
+
+<div class="center">
+</BR>
+<table style="font-align:center">
+	<TR>
+		<TD>
+				<image src="./Diseño e Imagen/Ugjaní Belleza.png" class="imagecenter"></image>
+		</TD>
+	</TR>
+	<TR style="font-align:center">
+		<TD>
+			<center>
+			<P style=" font-style: italic; ">		
+			</BR>
+			Nuestra marca brinda cuidado a tu piel y armonia a tu ser.
+			</BR></BR>
+			Para la elaboración de nuestros productos utilizamos insumos con propiedades de la naturaleza que son amigables con el planeta.
+			</BR></BR>
+			Restauran tu cuerpo y tu alma.
+			</BR></BR>
+			Todos ellos son elaborados a mano, con dedicación y amor para tí.
+			</BR></BR>
+			<H3>Contáctanos:</H3>
+			
+			<B>Cel.: 3183270694 / 3044894656</B>
+			
+			</P>
+			</center>
+		</TD>
+	</TR>
+	
+</table>
+		
+
+</div>
+			<!--
+			<image src="../Diseño e Imagen/LOGO5.jpeg" style=""></image>
+-->
+<div style=" margin: auto;
+    left: 100px;
+  width:90%;
+  border-radius: 10px;
+  padding: 5%;
+  text-align:center;">
+
+</BR></BR>
+		</BR></BR>
+
+<TABLE style="font-align:center; border: 1px solid black; border-radius:12px; padding:10px;">
+<TR>
+		
+		<TD cellpadding="3" style="text-align:center margin-left:50px">
+			<center>
+			<B >
+			<H1>Gratas Experiencias</H1>
+			</B>
+			</center>
+		</TD>
+		
+	</TR>
+	<TR>
+		<TD>
+			
+			<img id="jabon1" class="imagecatalog"  src="./Diseño e Imagen/Astronauta1.jpeg" alt="Jabon Figura Astronauta" />
+			</BR>Jabon con figura de astronauta
+		</TD>
+		<TD style="text-align:center margin-left:50px">
+			<center>
+			<image src="./Diseño e Imagen/AstronautasJabones2.jpeg" class="imagecatalog"></image>
+			</BR>Jabon con figura de astronauta
+			</center>
+		</TD>
+		<TD>
+			<image src="./Diseño e Imagen/Jabones1.jpeg" class="imagecatalog"></image>
+			</BR>Feria de Jabones
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			
+			<img id="jabon1" class="imagecatalog"  src="./Diseño e Imagen/ProductosMixtos1.jpeg" alt="Jabon Figura Astronauta" />
+			</BR>Nuestros Productos
+		</TD>
+		<TD style="text-align:center margin-left:50px">
+			<center>
+			<image src="./Diseño e Imagen/Velas1.jpeg" class="imagecatalog"></image>
+			</BR>Velas Aromaterapia Varios
+			</center>
+		</TD>
+		<TD>
+			<image src="./Diseño e Imagen/VelaSola.jpeg" class="imagecatalog"></image>
+			</BR>Velas Aromaterapia Miel
+		</TD>
+	</TR>
+</TABLE>
+</div>
 </B>
-	<DIV>
-		Portafolio de Servicios
-	</DIV>
 </BODY>
 </html>
